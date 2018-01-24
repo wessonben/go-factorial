@@ -7,13 +7,15 @@ func Calculate(value int) int {
 		return 0
 	}
 
-	if value == 1 {
-		return 1
+	if value <= 2 {
+		return value
 	}
 
-	if value == 2 {
-		return 2
+	factorial := value
+
+	for i := value - 1; i > 1; i-- {
+		factorial *= i
 	}
 
-	return value
+	return factorial
 }
